@@ -13,7 +13,7 @@ class DistritosMigration extends Migration
      */
     public function up()
     {
-        Schema::create('distrito', function (Blueprint $table) {
+        Schema::create('distritos', function (Blueprint $table) {
             $table->string('DisCod','6')->primary();
             $table->string('DisNom','30');
             $table->string('ProCod','4');
@@ -30,6 +30,6 @@ class DistritosMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('distrito');
+        Schema::dropIfExists('distritos');
     }
 }

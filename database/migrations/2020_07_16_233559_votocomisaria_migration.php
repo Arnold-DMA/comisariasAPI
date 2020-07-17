@@ -15,8 +15,8 @@ class VotocomisariaMigration extends Migration
     {
         Schema::create('voto_comisarias', function (Blueprint $table) {
             $table->string('ip','15')->primary();
-            $table->integer('ComCod','11');
-            $table->integer('VotPun','11');
+            $table->integer('ComCod');
+            $table->integer('VotPun');
             $table->foreign('ComCod')->references('ComCod')->on('comisarias');
         });
     }

@@ -14,8 +14,8 @@ class ComisariaMigration extends Migration
     public function up()
     {
         Schema::create('comisarias', function (Blueprint $table) {
-            $table->increments('ComCod','11')->primary();
-            $table->integer('ComCodInei','11');
+            $table->integer('ComCod')->primary();;
+            $table->integer('ComCodInei');
             $table->string('ComDepCod','2');
             $table->string('ComProCod','4');
             $table->string('ComDisCod','6');

@@ -14,9 +14,9 @@ class DenunciaMigration extends Migration
     public function up()
     {
         Schema::create('denuncias', function (Blueprint $table) {
-            $table->increment('DenCod','11')->primary();
+            $table->integer('DenCod')->primary();
             $table->enum('DenGen',['F','M']);
-            $table->integer('DenEda','11');
+            $table->integer('DenEda');
             $table->string('DenMes');
         });
     }
