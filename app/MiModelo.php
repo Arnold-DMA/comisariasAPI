@@ -1,8 +1,8 @@
 <?php namespace App;
 
-//use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class MiModelo /*extends Authenticatable*/{
+class MiModelo extends Model{
 	function saludar($nombre){
 		return "hola $nombre";
 	}

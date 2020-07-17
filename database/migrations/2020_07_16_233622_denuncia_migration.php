@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ComisariasMigration extends Migration
+class DenunciaMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class ComisariasMigration extends Migration
      */
     public function up()
     {
-        Schema::create('comisarias', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('denuncias', function (Blueprint $table) {
+            $table->increment('DenCod','11')->primary();
+            $table->enum('DenGen',['F','M']);
+            $table->integer('DenEda','11');
+            $table->string('DenMes');
         });
     }
 
@@ -26,6 +28,6 @@ class ComisariasMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comisarias');
+        Schema::dropIfExists('denuncias');
     }
 }
