@@ -5,7 +5,7 @@ class MiControlador extends Controller{
 
 	function index(){
 		$modelo = new MiModelo();
-		$resultado = $modelo->saludar("Jorge");
+		$resultado = $modelo->saludar("David");
 		return view("prueba/index",["saludo"=>$resultado]);
 	}
 

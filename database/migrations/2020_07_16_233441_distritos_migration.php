@@ -15,11 +15,12 @@ class DistritosMigration extends Migration
     {
         Schema::create('distritos', function (Blueprint $table) {
             $table->string('DisCod','6')->primary();
-            $table->string('DisNom','30');
+            $table->string('DisNom','50');
             $table->string('ProCod','4');
             $table->foreign('ProCod')->references('ProCod')->on('provincias');
             $table->string('DepCod','2');
             $table->foreign('DepCod')->references('DepCod')->on('departamentos');
+            $table->timestamps();
         });
     }
 

@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Distrito extends Model{
+class Ubigeo extends Model{
 	protected $table="distritos";
 	protected $primaryKey="DisCod";
-	protected $fillable=array('DisCod', 'DisNom','ProCod','DepCod');
+	protected $fillable=array('DisNom','ProCod','DepCod');
 
 	public function departamentos(){
 		$this->belongsTo('Departamento');

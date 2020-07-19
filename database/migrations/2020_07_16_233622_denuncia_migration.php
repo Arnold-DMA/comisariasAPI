@@ -18,6 +18,7 @@ class DenunciaMigration extends Migration
             $table->enum('DenGen',['F','M']);
             $table->integer('DenEda');
             $table->string('DenMes');
+            $table->timestamps();
         });
     }
 

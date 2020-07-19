@@ -15,8 +15,8 @@ class DepartamentoMigration extends Migration
     {
         Schema::create('departamentos', function (Blueprint $table) {
             $table->string('DepCod','2')->primary();
-            $table->string('DepNom','30');
-            //$table->timestamps();
+            $table->string('DepNom','50');
+            $table->timestamps();
         });
     }
 

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Provincia extends Model{
 	protected $table="provincias";
 	protected $primaryKey="ProCod";
-	protected $fillable=array('ProNom', 'DepCod');
+	protected $fillable=array('ProCod', 'ProNom', 'DepCod');
 
 	public function departamentos(){
 		$this->belongsTo('Departamento');

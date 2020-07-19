@@ -15,10 +15,10 @@ class ProvinciaMigration extends Migration
     {
         Schema::create('provincias', function (Blueprint $table) {
             $table->string('ProCod','4')->primary();
-            $table->string('ProNom','30');
+            $table->string('ProNom','50');
             $table->string('DepCod','2');
             $table->foreign('DepCod')->references('DepCod')->on('departamentos');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

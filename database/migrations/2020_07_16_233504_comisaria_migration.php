@@ -14,20 +14,21 @@ class ComisariaMigration extends Migration
     public function up()
     {
         Schema::create('comisarias', function (Blueprint $table) {
-            $table->integer('ComCod')->primary();;
-            $table->integer('ComCodInei');
-            $table->string('ComDepCod','2');
-            $table->string('ComProCod','4');
-            $table->string('ComDisCod','6');
-            $table->double('ComLat','8','2');
-            $table->double('ComLon','8','2');
-            $table->string('ComMacRegPol','40');
-            $table->string('ComRegPol','40');
-            $table->string('ComDivPol','40');
-            $table->string('ComNom','50');
+            $table->integer('ComCod')->primary();
+            $table->integer('ComCodInei')->nullable();
+            $table->string('ComDepCod','2')->nullable();
+            $table->string('ComProCod','4')->nullable();
+            $table->string('ComDisCod','6')->nullable();
+            $table->double('ComLat','12','8')->nullable();
+            $table->double('ComLon','12','8')->nullable();
+            $table->string('ComMacRegPol','40')->nullable();
+            $table->string('ComRegPol','40')->nullable();
+            $table->string('ComDivPol','40')->nullable();
+            $table->string('ComNom','50')->nullable();
             $table->foreign('ComDepCod')->references('DepCod')->on('departamentos');
             $table->foreign('ComProCod')->references('ProCod')->on('provincias');
             $table->foreign('ComDisCod')->references('DisCod')->on('distritos');
+            $table->timestamps();
         });
     }
 

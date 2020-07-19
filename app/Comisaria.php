@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comisaria extends Model{
 	protected $table="comisarias";
 	protected $primaryKey="ComCod";
-	protected $fillable=array('ComCodInei', 'ComDepCod', 'ComProCod', 'ComDisCod', 'ComLat', 'ComLon', 'ComMacRegPol', 'ComRegPol', 'ComDivPol', 'ComNom');
+	protected $fillable=array('ComCod', 'ComCodInei', 'ComDepCod', 'ComProCod', 'ComDisCod', 'ComLat', 'ComLon', 'ComMacRegPol', 'ComRegPol', 'ComDivPol', 'ComNom');
 
 	public function departamentos(){
 		$this->belongsTo('Departamento');

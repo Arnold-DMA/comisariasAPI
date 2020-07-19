@@ -18,6 +18,7 @@ class VotocomisariaMigration extends Migration
             $table->integer('ComCod');
             $table->integer('VotPun');
             $table->foreign('ComCod')->references('ComCod')->on('comisarias');
+            $table->timestamps();
         });
     }
 
